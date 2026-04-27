@@ -1,0 +1,13 @@
+{
+  "number": 9,
+  "value": 0.8626613791584049,
+  "params": {
+    "learning_rate": 0.04,
+    "subsample": 0.6
+  },
+  "user_attrs": {
+    "std_err": 0.0011993898823280675,
+    "mean_accuracy": 0.7864548494983278,
+    "mean_recall": 0.7444444444444445
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "model_number": "model_2a",
+  "model_type": "xgboost",
+  "source": "smallgrid_trial_best",
+  "selected_trial_number": 6,
+  "selected_trial_value": 0.7823146291179894,
+  "selected_trial_std_err": 0.004100392215408281,
+  "params": {
+    "learning_rate": 0.026225854179128615,
+    "subsample": 0.4,
+    "n_estimators": 250,
+    "scale_pos_weight": 0.8950705341575527,
+    "objective": "binary:logistic",
+    "eval_metric": "logloss",
+    "random_state": 20240627
+  },
+  "mean_precision": 0.7217391458564872,
+  "mean_recall": 0.7204437400950872,
+  "mean_roc_auc": 0.7823146291179894,
+  "mean_accuracy": 0.7058528428093646,
+  "mean_f1": 0.7210456284863778
+}

@@ -1,0 +1,8 @@
+{
+  "number": 4,
+  "value": 0.7371746630576553,
+  "min_impurity_decrease": 0.0007,
+  "std_err": 0.0037661740622442095,
+  "mean_accuracy": 0.6808528428093645,
+  "mean_recall": 0.7320126782884311
+}

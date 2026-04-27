@@ -1,0 +1,15 @@
+{
+  "number": 14,
+  "value": 0.8296297945205844,
+  "params": {
+    "max_depth": 16,
+    "min_samples_split": 4,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt"
+  },
+  "user_attrs": {
+    "std_err": 0.0019385164428800301,
+    "mean_accuracy": 0.7618810339458113,
+    "mean_recall": 0.8858307360345241
+  }
+}

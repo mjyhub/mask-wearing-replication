@@ -1,0 +1,119 @@
+[
+  {
+    "number": 1,
+    "value": 0.8603856392744363,
+    "params": {
+      "learning_rate": 0.02,
+      "subsample": 0.45
+    },
+    "user_attrs": {
+      "std_err": 0.0016602087141322477,
+      "mean_accuracy": 0.7749163879598662,
+      "mean_recall": 0.7725490196078431
+    }
+  },
+  {
+    "number": 2,
+    "value": 0.8607990012484393,
+    "params": {
+      "learning_rate": 0.02,
+      "subsample": 0.5282905364556068
+    },
+    "user_attrs": {
+      "std_err": 0.0014775168049639268,
+      "mean_accuracy": 0.7744147157190635,
+      "mean_recall": 0.7715686274509803
+    }
+  },
+  {
+    "number": 3,
+    "value": 0.8606950870235736,
+    "params": {
+      "learning_rate": 0.02,
+      "subsample": 0.6
+    },
+    "user_attrs": {
+      "std_err": 0.0017495904551697824,
+      "mean_accuracy": 0.7739966555183947,
+      "mean_recall": 0.7718954248366012
+    }
+  },
+  {
+    "number": 4,
+    "value": 0.8614169787765293,
+    "params": {
+      "learning_rate": 0.027860355160228698,
+      "subsample": 0.45
+    },
+    "user_attrs": {
+      "std_err": 0.001333403117667411,
+      "mean_accuracy": 0.7771739130434783,
+      "mean_recall": 0.7562091503267974
+    }
+  },
+  {
+    "number": 5,
+    "value": 0.8616447271792614,
+    "params": {
+      "learning_rate": 0.027860355160228698,
+      "subsample": 0.5282905364556068
+    },
+    "user_attrs": {
+      "std_err": 0.0016796868811764204,
+      "mean_accuracy": 0.7787625418060201,
+      "mean_recall": 0.7617647058823529
+    }
+  },
+  {
+    "number": 6,
+    "value": 0.8623555114929866,
+    "params": {
+      "learning_rate": 0.027860355160228698,
+      "subsample": 0.6
+    },
+    "user_attrs": {
+      "std_err": 0.0016852605895142324,
+      "mean_accuracy": 0.7795150501672241,
+      "mean_recall": 0.7568627450980392
+    }
+  },
+  {
+    "number": 7,
+    "value": 0.8618229051920394,
+    "params": {
+      "learning_rate": 0.04,
+      "subsample": 0.45
+    },
+    "user_attrs": {
+      "std_err": 0.0015065907797099968,
+      "mean_accuracy": 0.7871237458193981,
+      "mean_recall": 0.7490196078431373
+    }
+  },
+  {
+    "number": 8,
+    "value": 0.8624054490710142,
+    "params": {
+      "learning_rate": 0.04,
+      "subsample": 0.5282905364556068
+    },
+    "user_attrs": {
+      "std_err": 0.0014770354210111266,
+      "mean_accuracy": 0.7895484949832776,
+      "mean_recall": 0.7503267973856209
+    }
+  },
+  {
+    "number": 9,
+    "value": 0.8626613791584049,
+    "params": {
+      "learning_rate": 0.04,
+      "subsample": 0.6
+    },
+    "user_attrs": {
+      "std_err": 0.0011993898823280675,
+      "mean_accuracy": 0.7864548494983278,
+      "mean_recall": 0.7444444444444445
+    }
+  }
+]

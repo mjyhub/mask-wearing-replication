@@ -1,0 +1,42 @@
+[
+  {
+    "number": 1,
+    "value": 0.6874960380348651,
+    "min_impurity_decrease": 0.0002,
+    "std_err": 0.0010016140279446304,
+    "mean_accuracy": 0.6596989966555183,
+    "mean_recall": 0.6857369255150555
+  },
+  {
+    "number": 2,
+    "value": 0.7338127428018457,
+    "min_impurity_decrease": 0.0004,
+    "std_err": 0.002345225815315209,
+    "mean_accuracy": 0.6785117056856186,
+    "mean_recall": 0.7377179080824089
+  },
+  {
+    "number": 3,
+    "value": 0.736222949946005,
+    "min_impurity_decrease": 0.0005318290118556395,
+    "std_err": 0.0032714475431012795,
+    "mean_accuracy": 0.6777591973244147,
+    "mean_recall": 0.7456418383518224
+  },
+  {
+    "number": 4,
+    "value": 0.7371746630576553,
+    "min_impurity_decrease": 0.0007,
+    "std_err": 0.0037661740622442095,
+    "mean_accuracy": 0.6808528428093645,
+    "mean_recall": 0.7320126782884311
+  },
+  {
+    "number": 5,
+    "value": 0.7320624658149025,
+    "min_impurity_decrease": 0.001,
+    "std_err": 0.003791051121472694,
+    "mean_accuracy": 0.680685618729097,
+    "mean_recall": 0.7182250396196513
+  }
+]

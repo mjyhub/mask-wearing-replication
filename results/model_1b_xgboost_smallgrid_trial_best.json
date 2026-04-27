@@ -1,0 +1,16 @@
+{
+  "number": 26,
+  "value": 0.8949851706014318,
+  "params": {
+    "learning_rate": 0.01341733455418124,
+    "max_depth": 10,
+    "min_child_weight": 1,
+    "subsample": 0.75,
+    "colsample_bytree": 0.5412040253661365
+  },
+  "user_attrs": {
+    "std_err": 0.0019382943713749429,
+    "mean_accuracy": 0.841925080625155,
+    "mean_recall": 0.8743381574302859
+  }
+}

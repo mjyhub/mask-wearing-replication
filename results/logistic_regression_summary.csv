@@ -1,0 +1,7 @@
+Model,Description,Precision_mean,Precision_sd,Recall_mean,Recall_sd,ROC_AUC_mean,ROC_AUC_sd,Accuracy_mean,Accuracy_sd,F1_mean,F1_sd
+model_1,Face mask behaviour - full sample,0.801,0.003,0.819,0.005,0.872,0.002,0.794,0.002,0.81,0.003
+model_1a,Face mask behaviour - early non-mandate period,0.482,0.003,0.774,0.021,0.824,0.007,0.729,0.002,0.594,0.007
+model_1b,Face mask behaviour - mandate period,0.877,0.003,0.781,0.002,0.837,0.004,0.769,0.002,0.826,0.001
+model_2,Protective behaviour - full sample,0.752,0.003,0.862,0.007,0.775,0.005,0.726,0.005,0.804,0.004
+model_2a,Protective behaviour - early non-mandate period,0.68,0.01,0.689,0.009,0.728,0.008,0.665,0.01,0.685,0.009
+model_2b,Protective behaviour - mandate period,0.858,0.006,0.735,0.006,0.78,0.007,0.721,0.005,0.792,0.004

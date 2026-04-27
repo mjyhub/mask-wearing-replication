@@ -1,0 +1,18 @@
+{
+  "model_number": "model_2",
+  "model_type": "binary_tree",
+  "source": "smallgrid_trial_best",
+  "selected_trial_number": 2,
+  "selected_trial_value": 0.793440779829759,
+  "selected_trial_std_err": 0.0015705292541421086,
+  "params": {
+    "min_samples_leaf": 2,
+    "min_weight_fraction_leaf": 0.0015,
+    "min_impurity_decrease": 0.00011823652616591998
+  },
+  "mean_precision": 0.7775204345996148,
+  "mean_recall": 0.8402301606329419,
+  "mean_roc_auc": 0.793440779829759,
+  "mean_accuracy": 0.7400186857676736,
+  "mean_f1": 0.8076176691941512
+}

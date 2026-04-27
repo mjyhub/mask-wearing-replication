@@ -1,0 +1,9 @@
+model_number,model_type,source,num_perm,repeated_file,summary_file
+model_1a,rf,smallgrid_trial_best,50,../results/model_1a_rf_feature_importance_repeated.csv,../results/model_1a_rf_feature_importance_summary.csv
+model_1b,rf,smallgrid_trial_best,50,../results/model_1b_rf_feature_importance_repeated.csv,../results/model_1b_rf_feature_importance_summary.csv
+model_2a,rf,smallgrid_trial_best,50,../results/model_2a_rf_feature_importance_repeated.csv,../results/model_2a_rf_feature_importance_summary.csv
+model_2b,rf,smallgrid_trial_best,50,../results/model_2b_rf_feature_importance_repeated.csv,../results/model_2b_rf_feature_importance_summary.csv
+model_1a,xgboost,smallgrid_trial_best,50,../results/model_1a_xgboost_feature_importance_repeated.csv,../results/model_1a_xgboost_feature_importance_summary.csv
+model_1b,xgboost,smallgrid_trial_best,50,../results/model_1b_xgboost_feature_importance_repeated.csv,../results/model_1b_xgboost_feature_importance_summary.csv
+model_2a,xgboost,smallgrid_trial_best,50,../results/model_2a_xgboost_feature_importance_repeated.csv,../results/model_2a_xgboost_feature_importance_summary.csv
+model_2b,xgboost,smallgrid_trial_best,50,../results/model_2b_xgboost_feature_importance_repeated.csv,../results/model_2b_xgboost_feature_importance_summary.csv

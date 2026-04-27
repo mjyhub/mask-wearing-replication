@@ -1,0 +1,23 @@
+{
+  "model_number": "model_2",
+  "model_type": "rf",
+  "source": "smallgrid_trial_best",
+  "selected_trial_number": 14,
+  "selected_trial_value": 0.8296297945205844,
+  "selected_trial_std_err": 0.0019385164428800301,
+  "params": {
+    "max_depth": 16,
+    "min_samples_split": 4,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt",
+    "n_estimators": 250,
+    "bootstrap": true,
+    "random_state": 20240627,
+    "n_jobs": -1
+  },
+  "mean_precision": 0.778241089776514,
+  "mean_recall": 0.8858307360345241,
+  "mean_roc_auc": 0.8296297945205844,
+  "mean_accuracy": 0.7618810339458113,
+  "mean_f1": 0.8285394102400956
+}

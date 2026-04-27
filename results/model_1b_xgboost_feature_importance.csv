@@ -1,0 +1,59 @@
+feature,importance
+state_Western Australia,0.1797676
+state_Queensland,0.10710792
+protective_behaviour_nomask_scale,0.081076264
+state_Victoria,0.07986372
+state_New South Wales,0.07418868
+state_South Australia,0.041943822
+state_Tasmania,0.039867274
+week_number,0.027564738
+i11_health_Very willing,0.024336249
+i11_health_Very unwilling,0.013124721
+i9_health_Yes,0.011690119
+state_Northern Territory,0.011388995
+i9_health_Not sure,0.009004336
+employment_status_Retired,0.008337016
+WCRex2_No confidence at all,0.008254018
+WCRex2_A lot of confidence,0.008222035
+r1_1,0.008203499
+r1_2,0.0077358894
+WCRex1_Very well,0.007671411
+age,0.0075132092
+employment_status_Not working,0.0074681942
+WCRex1_Very badly,0.0074215084
+PHQ4_1_Prefer not to say,0.0073201424
+PHQ4_4_N/A,0.0071161143
+PHQ4_2_Prefer not to say,0.007111619
+d1_comorbidities_Prefer_not_to_say,0.0070399735
+i11_health_Somewhat willing,0.0070393085
+household_size,0.006926086
+i2_health,0.006884797
+PHQ4_4_Prefer not to say,0.0067336867
+cantril_ladder,0.0066931983
+employment_status_Unemployed,0.0065838406
+WCRex2_Don't know,0.006534008
+PHQ4_3_N/A,0.0065129553
+PHQ4_1_Nearly every day,0.0064283935
+WCRex2_Not very much confidence,0.006409378
+i11_health_Somewhat unwilling,0.0064045074
+PHQ4_4_Not at all,0.006354425
+WCRex1_Somewhat badly,0.00633597
+PHQ4_2_Not at all,0.006287163
+d1_comorbidities_No,0.0061961506
+PHQ4_2_Nearly every day,0.0061893133
+PHQ4_3_Not at all,0.006175181
+d1_comorbidities_Yes,0.0060901004
+employment_status_Part time employment,0.0060171266
+PHQ4_1_Not at all,0.0059373416
+gender_Male,0.0059211715
+PHQ4_3_Prefer not to say,0.005905519
+PHQ4_2_N/A,0.0058865123
+PHQ4_3_Nearly every day,0.005782685
+PHQ4_4_Nearly every day,0.0057172915
+WCRex1_Somewhat well,0.0057005445
+PHQ4_2_Several days,0.005584021
+PHQ4_4_Several days,0.0054419776
+PHQ4_1_N/A,0.0054327752
+PHQ4_3_Several days,0.00533651
+PHQ4_1_Several days,0.0052166367
+i11_health_Not sure,0.005099666

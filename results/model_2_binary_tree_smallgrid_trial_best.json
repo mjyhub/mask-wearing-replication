@@ -1,0 +1,14 @@
+{
+  "number": 2,
+  "value": 0.793440779829759,
+  "params": {
+    "min_samples_leaf": 2,
+    "min_weight_fraction_leaf": 0.0015,
+    "min_impurity_decrease": 0.00011823652616591998
+  },
+  "user_attrs": {
+    "std_err": 0.0015705292541421086,
+    "mean_accuracy": 0.7400186857676736,
+    "mean_recall": 0.8402301606329419
+  }
+}

@@ -3,7 +3,7 @@ Small grid search for model_1a xgboost
 around the original best_within_one values
 
 Author:
-    Your Name
+    jiayi ma
 Date created:
     22/04/2026
 '''
@@ -17,7 +17,7 @@ import xgboost as xgb
 from sklearn.model_selection import StratifiedShuffleSplit, cross_validate
 
 # %% Model info
-model_number = "model_1"
+model_number = "model_1a"
 model_type = "xgboost"
 
 # %% Read original best_within_one

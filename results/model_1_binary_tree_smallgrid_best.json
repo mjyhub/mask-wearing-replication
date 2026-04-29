@@ -1,9 +1,8 @@
 {
-    "best_score": 0.8927376943601963,
-    "best_params": {
-        "max_depth": 9,
-        "min_impurity_decrease": 3.4657937790924265e-05,
-        "min_samples_split": 6,
-        "min_weight_fraction_leaf": 0.0008470382210465552
-    }
+  "number": 5,
+  "value": 0.8801751990222085,
+  "min_impurity_decrease": 0.0001,
+  "std_err": 0.0015204954123524523,
+  "mean_accuracy": 0.8249454998442853,
+  "mean_recall": 0.8404063860667634
 }

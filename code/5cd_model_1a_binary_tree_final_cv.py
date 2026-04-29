@@ -3,7 +3,7 @@ Final cross validation for model_1a binary tree
 using small grid best parameter
 
 Author:
-    Your Name
+    jiayi ma
 Date created:
     22/04/2026
 '''

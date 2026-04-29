@@ -3,7 +3,7 @@ Small grid search for model_1 binary tree
 around the original best_within_one value
 
 Author:
-    Your Name
+    jiayi ma
 Date created:
     22/04/2026
 '''

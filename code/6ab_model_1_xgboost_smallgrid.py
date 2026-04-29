@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Small grid search for Model 1 XGBoost.
+Final cross-validation for Model 1 XGBoost.
 
-This script uses the best-within-one-standard-error parameters from the
-previous Optuna tuning stage as the centre of a small grid search.
+This script reads the best parameters selected from the small grid search,
+then evaluates the XGBoost model using 5-fold Stratified Shuffle Split
+cross-validation.
 
 Model 1: predicting face mask usage
 Model type: XGBoost
@@ -13,10 +14,11 @@ Model type: XGBoost
 # %% Packages
 
 import json
+import pickle
 import pandas as pd
 
 from xgboost import XGBClassifier
-from sklearn.model_selection import GridSearchCV, StratifiedShuffleSplit
+from sklearn.model_selection import cross_validate, StratifiedShuffleSplit
 
 
 # %% Parameter setup
@@ -25,56 +27,23 @@ model_number = "model_1"
 model_type = "xgboost"
 
 
-# %% Read best-within-one parameters
+# %% Read best parameters from small grid search
 
-with open(f"../results/{model_number}_{model_type}_best_within_one.json", "r") as f:
-    best_params = json.load(f)
+with open(f"../results/{model_number}_{model_type}_smallgrid_best.json", "r") as f:
+    smallgrid_result = json.load(f)
 
+best_params = smallgrid_result["best_params"]
+centre_params = smallgrid_result["centre_params"]
 
-# %% Extract centre parameters
-
-center_learning_rate = float(best_params["learning_rate"])
-center_max_depth = int(best_params["max_depth"])
-center_subsample = float(best_params["subsample"])
-center_colsample_bytree = float(best_params["colsample_bytree"])
-
-
-# %% Define small grid search space
-
-param_grid = {
-    "learning_rate": [
-        center_learning_rate * 0.75,
-        center_learning_rate,
-        center_learning_rate * 1.25
-    ],
-    "max_depth": [
-        max(1, center_max_depth - 1),
-        center_max_depth,
-        center_max_depth + 1
-    ],
-    "subsample": [
-        max(0.1, center_subsample - 0.05),
-        center_subsample,
-        min(1.0, center_subsample + 0.05)
-    ],
-    "colsample_bytree": [
-        max(0.1, center_colsample_bytree - 0.05),
-        center_colsample_bytree,
-        min(1.0, center_colsample_bytree + 0.05)
-    ]
+# learning_rate and max_depth were tuned in the small grid search.
+# subsample and colsample_bytree were not tuned, so they are kept at the centre values.
+params = {
+    "learning_rate": float(best_params["learning_rate"]),
+    "max_depth": int(best_params["max_depth"]),
+    "subsample": float(centre_params["subsample"]),
+    "colsample_bytree": float(centre_params["colsample_bytree"]),
+    "n_estimators": 250
 }
-
-
-# %% Cross-validation setting
-
-n_splits = 5
-seed = 20240627
-
-cv = StratifiedShuffleSplit(
-    n_splits=n_splits,
-    test_size=1 / n_splits,
-    random_state=seed
-)
 
 
 # %% Load training data
@@ -90,54 +59,70 @@ y = pd.read_csv(
 ).values.ravel()
 
 
-# %% Define XGBoost model
+# %% Cross-validation setting
+
+n_splits = 5
+seed = 20240627
+
+cv = StratifiedShuffleSplit(
+    n_splits=n_splits,
+    test_size=1 / n_splits,
+    random_state=seed
+)
+
+
+# %% Define final XGBoost model
 
 model = XGBClassifier(
     objective="binary:logistic",
     eval_metric="logloss",
     random_state=seed,
-    n_jobs=-1
-)
-
-
-# %% Run small grid search
-
-grid_search = GridSearchCV(
-    estimator=model,
-    param_grid=param_grid,
-    scoring="roc_auc",
-    cv=cv,
     n_jobs=-1,
-    return_train_score=True
+    **params
 )
 
-grid_search.fit(x, y)
+
+# %% Define evaluation metrics
+
+metric_list = [
+    "precision",
+    "recall",
+    "roc_auc",
+    "accuracy",
+    "f1"
+]
+
+
+# %% Run final cross-validation
+
+cv_scores = cross_validate(
+    model,
+    x,
+    y,
+    cv=cv,
+    scoring=metric_list,
+    return_train_score=False
+)
 
 
 # %% Print results
 
-print(f"{model_type}-{model_number} small grid search results")
-print("Best ROC-AUC:", round(grid_search.best_score_, 4))
-print("Best parameters:")
-print(grid_search.best_params_)
+print(f"{model_type}-{model_number} final CV results")
+print("Parameters used:")
+print(params)
+print()
+
+print("Mean precision:", round(cv_scores["test_precision"].mean(), 3))
+print("Mean recall:", round(cv_scores["test_recall"].mean(), 3))
+print("Mean roc_auc:", round(cv_scores["test_roc_auc"].mean(), 3))
+print("Mean accuracy:", round(cv_scores["test_accuracy"].mean(), 3))
+print("Mean f1:", round(cv_scores["test_f1"].mean(), 3))
 
 
-# %% Save best small grid search result
+# %% Save final CV results
 
-smallgrid_result = {
-    "best_score": grid_search.best_score_,
-    "best_params": grid_search.best_params_,
-    "centre_params": {
-        "learning_rate": center_learning_rate,
-        "max_depth": center_max_depth,
-        "subsample": center_subsample,
-        "colsample_bytree": center_colsample_bytree
-    },
-    "param_grid": param_grid
-}
-
-with open(f"../results/{model_number}_{model_type}_smallgrid_best.json", "w") as f:
-    json.dump(smallgrid_result, f, indent=4)
+with open(f"../results/{model_number}_{model_type}.pkl", "wb") as f:
+    pickle.dump(cv_scores, f)
 
 print()
-print(f"Saved small grid search result to ../results/{model_number}_{model_type}_smallgrid_best.json")
+print(f"Saved CV results to ../results/{model_number}_{model_type}.pkl")

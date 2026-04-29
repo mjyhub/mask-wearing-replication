@@ -48,7 +48,7 @@ all_combos = list(itertools.product(
 # %% Run small grid
 for i, (max_depth, min_samples_split, min_samples_leaf, max_features) in enumerate(all_combos, start=1):
     clf = RandomForestClassifier(
-        n_estimators=100,
+        n_estimators=250,
         max_depth=max_depth,
         min_samples_split=min_samples_split,
         min_samples_leaf=min_samples_leaf,

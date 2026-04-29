@@ -3,7 +3,7 @@
 """
 Final cross-validation for Model 1 Binary Tree.
 
-This script reads the best parameters selected from the small grid search,
+This script reads the best min_impurity_decrease selected from the small grid search,
 then evaluates the Binary Tree model using 5-fold Stratified Shuffle Split
 cross-validation.
 
@@ -27,20 +27,16 @@ model_number = "model_1"
 model_type = "binary_tree"
 
 
-# %% Read best parameters from small grid search
+# %% Read best parameter from small grid search
 
 with open(f"../results/{model_number}_{model_type}_smallgrid_best.json", "r") as f:
     smallgrid_result = json.load(f)
 
-params = smallgrid_result["best_params"]
-
-# Make sure integer parameters are in the correct format
-params["max_depth"] = int(params["max_depth"])
-params["min_samples_split"] = int(params["min_samples_split"])
-
-# Make sure continuous parameters are float
-params["min_weight_fraction_leaf"] = float(params["min_weight_fraction_leaf"])
-params["min_impurity_decrease"] = float(params["min_impurity_decrease"])
+# Your smallgrid_best.json does not contain "best_params".
+# It directly stores "min_impurity_decrease", so we read it directly.
+params = {
+    "min_impurity_decrease": float(smallgrid_result["min_impurity_decrease"])
+}
 
 
 # %% Load training data
@@ -68,12 +64,15 @@ cv = StratifiedShuffleSplit(
 )
 
 
-# %% Define model and metrics
+# %% Define final binary tree model
 
 model = DecisionTreeClassifier(
     **params,
     random_state=seed
 )
+
+
+# %% Define evaluation metrics
 
 metric_list = [
     "precision",
@@ -84,7 +83,7 @@ metric_list = [
 ]
 
 
-# %% Run cross-validation
+# %% Run final cross-validation
 
 cv_scores = cross_validate(
     model,
@@ -110,7 +109,7 @@ print("Mean accuracy:", round(cv_scores["test_accuracy"].mean(), 3))
 print("Mean f1:", round(cv_scores["test_f1"].mean(), 3))
 
 
-# %% Save results
+# %% Save final CV results
 
 with open(f"../results/{model_number}_{model_type}.pkl", "wb") as f:
     pickle.dump(cv_scores, f)

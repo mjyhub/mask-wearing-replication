@@ -32,13 +32,16 @@ model_type = "xgboost"
 with open(f"../results/{model_number}_{model_type}_smallgrid_best.json", "r") as f:
     smallgrid_result = json.load(f)
 
-params = smallgrid_result["best_params"]
+best_params = smallgrid_result["best_params"]
+centre_params = smallgrid_result["centre_params"]
 
-# Make sure parameters are in the correct format
-params["learning_rate"] = float(params["learning_rate"])
-params["max_depth"] = int(params["max_depth"])
-params["subsample"] = float(params["subsample"])
-params["colsample_bytree"] = float(params["colsample_bytree"])
+params = {
+    "learning_rate": float(best_params["learning_rate"]),
+    "subsample": float(best_params["subsample"]),
+    "max_depth": int(centre_params["max_depth"]),
+    "colsample_bytree": float(centre_params["colsample_bytree"]),
+    "n_estimators": 250
+}
 
 
 # %% Load training data

@@ -1,7 +1,0 @@
-Model,Prediction task,Precision,Recall,ROC-AUC,Accuracy,F1-score
-model_1,Face mask behaviour - full sample,0.801,0.819,0.872,0.794,0.81
-model_1a,Face mask behaviour - early non-mandate period,0.482,0.774,0.824,0.729,0.594
-model_1b,Face mask behaviour - mandate period,0.877,0.781,0.837,0.769,0.826
-model_2,Protective behaviour - full sample,0.752,0.862,0.775,0.726,0.804
-model_2a,Protective behaviour - early non-mandate period,0.68,0.689,0.728,0.665,0.685
-model_2b,Protective behaviour - mandate period,0.858,0.735,0.78,0.721,0.792

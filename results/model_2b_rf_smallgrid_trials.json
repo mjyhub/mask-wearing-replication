@@ -151,7 +151,7 @@
   },
   {
     "number": 11,
-    "value": 0.835717721570956,
+    "value": 0.8357177828473805,
     "params": {
       "max_depth": 19,
       "min_samples_split": 2,
@@ -159,7 +159,7 @@
       "max_features": null
     },
     "user_attrs": {
-      "std_err": 0.0015214858510265248,
+      "std_err": 0.001521476185040808,
       "mean_accuracy": 0.7992557677995535,
       "mean_recall": 0.9134410450326571
     }
@@ -189,7 +189,7 @@
       "max_features": null
     },
     "user_attrs": {
-      "std_err": 0.0016833042747062316,
+      "std_err": 0.001683329489923227,
       "mean_accuracy": 0.7980649962788389,
       "mean_recall": 0.9112409762805088
     }
@@ -219,7 +219,7 @@
       "max_features": null
     },
     "user_attrs": {
-      "std_err": 0.0015214858510265205,
+      "std_err": 0.001521483362813807,
       "mean_accuracy": 0.7992557677995535,
       "mean_recall": 0.9134410450326571
     }

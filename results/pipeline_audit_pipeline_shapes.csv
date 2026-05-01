@@ -1,0 +1,2 @@
+raw_rows,raw_columns,cleaned_rows,cleaned_columns,preprocessed_rows,preprocessed_columns,before_mandate_rows,after_mandate_rows,train_rows,test_rows
+53833,513,40136,26,40136,65,14945,25191,32108,8028

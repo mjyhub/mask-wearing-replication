@@ -1,0 +1,7 @@
+model,target,period,train_rows,test_rows,feature_count,target_classes
+model_1,face_mask_behaviour_binary,all,32108,8028,59,No|Yes
+model_1a,face_mask_behaviour_binary,before,11956,2989,58,No|Yes
+model_1b,face_mask_behaviour_binary,after,20152,5039,58,No|Yes
+model_2,protective_behaviour_binary,all,32108,8028,58,No|Yes
+model_2a,protective_behaviour_binary,before,11956,2989,57,No|Yes
+model_2b,protective_behaviour_binary,after,20152,5039,57,No|Yes

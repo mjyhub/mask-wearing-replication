@@ -1,13 +1,17 @@
 {
-  "number": 9,
-  "value": 0.8626613791584049,
+  "number": 8,
+  "value": 0.8622181831534113,
   "params": {
-    "learning_rate": 0.04,
-    "subsample": 0.6
+    "learning_rate": 0.03,
+    "max_depth": 6,
+    "min_child_weight": 1.0,
+    "subsample": 0.5282905364556068,
+    "colsample_bytree": 1.0,
+    "gamma": 0.0
   },
   "user_attrs": {
-    "std_err": 0.0011993898823280675,
-    "mean_accuracy": 0.7864548494983278,
-    "mean_recall": 0.7444444444444445
+    "std_err": 0.0015666843925008255,
+    "mean_accuracy": 0.7810200668896321,
+    "mean_recall": 0.7565359477124183
   }
 }
